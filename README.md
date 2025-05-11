@@ -3,6 +3,7 @@
 TELEBOT
 
 A Telegram bot displaying Kyiv time
+t.me/lenzzzzzzz_bot
 
 Features
 
@@ -20,6 +21,21 @@ Required Go packages:
     github.com/spf13/cobra
     github.com/stianeikeland/go-rpio
     gopkg.in/telebot.v4
+
+Installation
+
+1. Clone the repository:
+
+git clone https://github.com/lenzzzzzzz/telebot.git
+cd telebot
+
+2. Set up your Telegram Bot Token:
+
+export TELE_TOKEN="your_telegram_bot_token"
+
+3. Build the application:
+
+make build
 
 Usage
 
