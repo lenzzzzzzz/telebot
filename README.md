@@ -1,54 +1,53 @@
-# telebot
-
-TELEBOT
+# TELEBOT
 
 A Telegram bot displaying Kyiv time
-t.me/lenzzzzzzz_bot
 
-Features
+https://t.me/lenzzzzzzz_bot
 
-Show current time in Kyiv
-Cross-platform support (Linux, Darwin, Windows)
-Multi-architecture support (amd64, arm64)
-Docker containerization support
+## Features
 
-Prerequisites
+- Show current time in Kyiv
+- Cross-platform support (Linux, Darwin, Windows)
+- Multi-architecture support (amd64, arm64)
+- Docker containerization support
+
+## Prerequisites
 
 Docker (optional, for containerization)
 Telegram Bot Token (set as TELE_TOKEN environment variable)
 Required Go packages:
 
-    github.com/spf13/cobra
-    github.com/stianeikeland/go-rpio
-    gopkg.in/telebot.v4
+  -  github.com/spf13/cobra
+  -  github.com/stianeikeland/go-rpio
+  -  gopkg.in/telebot.v4
 
-Installation
+## Installation
 
 1. Clone the repository:
 
-git clone https://github.com/lenzzzzzzz/telebot.git
+git clone https://github.com/lenzzzzzzz/telebot.git  
 cd telebot
 
 2. Set up your Telegram Bot Token:
 
 export TELE_TOKEN="your_telegram_bot_token"
 
-3. Build the application:
+3. Build the application:  
 
 make build
 
-Usage
+## Usage
 
-Start the bot:
+Start the bot:  
 ./telebot start
 
-Development
+## Development
 The project uses Cobra for CLI command management
 
-Project Structure
+## Project Structure
 
 
-cmd/ - Contains the main command implementations
-        telebot.go - Main bot implementation and traffic light control
-        root.go - Root command configuration
-        version.go - Version command implementation
+cmd/ - Contains the main command implementations  
+telebot.go - Main bot implementation and traffic light control  
+root.go - Root command configuration  
+version.go - Version command implementation
