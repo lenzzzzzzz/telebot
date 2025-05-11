@@ -40,16 +40,24 @@ to quickly create a Cobra application.`,
 		})
 
 		if err != nil {
-			log.Fatal("Please check TELE_TOKEN env variable. %s", err)
+			log.Fatal("Please check TELE_TOKEN env variable. %s",err)
 			return
 		}
-
+		
 		telebot.Handle(tele.OnText, func(m tele.Context) error {
 			log.Print(m.Message().Payload, m.Text())
 			payload := m.Message().Payload
 				switch payload {
 				case "hello":
 						err = m.Send(fmt.Sprintf("Hello I'm Telebot!"))
+				case "hi":
+						err = m.Send(fmt.Sprintf("Hi"))
+				case "time":
+						loc, err := time.LoadLocation("Europe/Kyiv")
+						if err != nil {
+       						 panic(err)
+    					}
+						err = m.Send(fmt.Sprintf("Time is: %s",time.Now().In(loc).Format("2006-01-02 15:04:05")))			 	
 				}
 
 			return err
