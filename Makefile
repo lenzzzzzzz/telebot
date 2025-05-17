@@ -17,4 +17,4 @@ image:
 run:
 	./telebot
 clean:
-	rm -rf telebot	
+	rmi telebot	
