@@ -3,7 +3,8 @@ ARG TARGETOS
 ARG TARGETARCH
 WORKDIR /go/src/app
 COPY . .
-RUN go get
+
 RUN make build
+
 
 ENTRYPOINT [ "./telebot" ]
